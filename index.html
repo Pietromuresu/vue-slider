@@ -39,11 +39,11 @@
 
         <div class="row h-100 d-block">
           
-            <img :class="{active : counter === image.num}" @click="counter=image.num, addActive(image)" class="col my-2 carouselMenu" v-for="image in images" :src="image.src" :alt="image.alt">
+            <img :class="{active : counter === image.num}" @click="counter=image.num" class="col my-2 carouselMenu" v-for="image in images" :src="image.src" :alt="image.alt">
 
         </div>
  
-        <div  @click="nextPrev=true, nextPrevFunction(), isActive = !isActive" class="d-flex pm-up ">
+        <div  @click="nextPrev=true, nextPrevFunction()" class="d-flex pm-up ">
           <i class="fa-solid fa-chevron-down"></i>
         </div>
           

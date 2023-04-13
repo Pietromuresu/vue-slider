@@ -34,7 +34,6 @@ createApp({
 
       },
     ],
-    isActive: false,
     nextPrev: false,
     counter: 0,
     mouseHover: false,
