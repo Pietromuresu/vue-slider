@@ -21,12 +21,13 @@
 <body id="app">
   
   <div  class="pm-container">
-    <div class="row text-center ">
+    <div @mouseover="stopAutoplayFunction() "
+    v-on:mouseleave="autoplayFunction()"  class="row text-center ">
 
       <div class="col-8 position-relative">
   
           <div class=" align-content-center h-100 d-grid"  id="img-container">
-            <img :src="images[counter].src" alt="images[counter].alt">
+            <img  :src="images[counter].src" alt="images[counter].alt">
           </div>      
  
       </div>

@@ -27,7 +27,8 @@ createApp({
     ],
     nextPrev: false,
     counter: 0,
-    mouseHover: false
+    mouseHover: false,
+    auto: null
     }
   },
 
@@ -49,14 +50,18 @@ createApp({
     },
 
     autoplayFunction(){
-      if(this.mouseHover == false){
-        const auto = setInterval(() =>{
+      
+        this.auto = setInterval(() =>{
           this.counter++
           if ( this.counter >= this.images.length ){
             this.counter = 0
           }
         }, 3000) 
-      }
+      
+    },
+
+    stopAutoplayFunction(){
+      clearInterval(this.auto)
     }
    },
 
