@@ -26,7 +26,8 @@ createApp({
       },
     ],
     nextPrev: false,
-    counter: 0
+    counter: 0,
+    mouseHover: false
     }
   },
 
@@ -45,6 +46,21 @@ createApp({
       }else if ( this.counter >= this.images.length ){
         this.counter = 0
       }
+    },
+
+    autoplayFunction(){
+      if(this.mouseHover == false){
+        const auto = setInterval(() =>{
+          this.counter++
+          if ( this.counter >= this.images.length ){
+            this.counter = 0
+          }
+        }, 3000) 
+      }
     }
+   },
+
+   mounted(){
+    this.autoplayFunction()
    }
 }).mount('#app')
