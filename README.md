@@ -9,10 +9,10 @@ Partendo dal markup della versione svolta in js plain, rifare lo slider ma quest
 
 
 
-1. applicare l'autoplay 
+1. applicare l'autoplay -
 
 creare una timing function che faccia incrementare il counter ogni tre secondi al caricamento della pagina 
 
-2. se il mouse è in hover bloccare l'autoplay 
+2. se il mouse è in hover bloccare l'autoplay -
 
 inserire un clear interval della funzione che fa l'autoplay sull'hover dello slider 

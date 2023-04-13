@@ -6,23 +6,28 @@ createApp({
           images:[
       {
         src: 'assets/img/01.webp',
-        alt: 'spiderman'
+        alt: 'spiderman',
+        num: 0
       },
       {
         src: 'assets/img/02.webp',
-        alt: 'gatti'
+        alt: 'gatti',
+        num: 1
       },
       {
         src: 'assets/img/03.webp',
-        alt: 'fortnite'
+        alt: 'fortnite',
+        num: 2
       },
       {
         src: 'assets/img/04.webp',
-        alt: 'il gatto con gli stivali'
+        alt: 'il gatto con gli stivali',
+        num: 3
       },
       {
         src: 'assets/img/05.webp',
-        alt: 'avengers'
+        alt: 'avengers',
+        num: 4
       },
     ],
     nextPrev: false,
@@ -36,10 +41,8 @@ createApp({
     nextPrevFunction(){
       if(this.nextPrev){
         this.counter++
-        console.log(this.counter);
       }else {
         this.counter--
-        console.log(this.counter);
       }
 
       if(this.counter < 0){
@@ -62,7 +65,12 @@ createApp({
 
     stopAutoplayFunction(){
       clearInterval(this.auto)
-    }
+    },
+    
+    // logora(){
+    //   counter= this.image[]
+      
+    // }
    },
 
    mounted(){

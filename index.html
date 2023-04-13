@@ -21,8 +21,7 @@
 <body id="app">
   
   <div  class="pm-container">
-    <div @mouseover="stopAutoplayFunction() "
-    v-on:mouseleave="autoplayFunction()"  class="row text-center ">
+    <div @mouseover="stopAutoplayFunction() "  v-on:mouseleave="autoplayFunction()"  class="row text-center ">
 
       <div class="col-8 position-relative">
   
@@ -40,7 +39,7 @@
 
         <div class="row h-100 d-block">
           
-            <img class="col my-2 carouselMenu" v-for="image in images" :src="image.src" :alt="image.alt">
+            <img  @click="counter=image.num" class="col my-2 carouselMenu" v-for="image in images" :src="image.src" :alt="image.alt">
 
         </div>
  
