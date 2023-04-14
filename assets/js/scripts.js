@@ -6,32 +6,23 @@ createApp({
           images:[
       {
         src: 'assets/img/01.webp',
-        alt: 'spiderman',
-        num: 0,
+        alt: 'spiderman'
       },
       {
         src: 'assets/img/02.webp',
-        alt: 'gatti',
-        num: 1,
-
+        alt: 'gatti'
       },
       {
         src: 'assets/img/03.webp',
-        alt: 'fortnite',
-        num: 2,
-
+        alt: 'fortnite'
       },
       {
         src: 'assets/img/04.webp',
-        alt: 'il gatto con gli stivali',
-        num: 3,
-
+        alt: 'il gatto con gli stivali'
       },
       {
         src: 'assets/img/05.webp',
-        alt: 'avengers',
-        num: 4,
-
+        alt: 'avengers'
       },
     ],
     nextPrev: false,
@@ -43,11 +34,7 @@ createApp({
 
   methods: {
     nextPrevFunction(){
-      if(this.nextPrev){
-        this.counter++
-      }else {
-        this.counter--
-      }
+      this.nextPrev === this.nextPrev ?  this.counter++ : this.counter--
 
       if(this.counter < 0){
         this.counter = this.images.length - 1

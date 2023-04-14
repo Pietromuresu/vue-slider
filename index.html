@@ -21,9 +21,13 @@
 <body id="app">
   
   <div  class="pm-container">
-    <div @mouseover="stopAutoplayFunction() "  v-on:mouseleave="autoplayFunction()"  class="row text-center ">
+      <div
+            @mouseover="stopAutoplayFunction() "
+            @mouseleave="autoplayFunction()"
+            class="row text-center ">
 
-      <div class="col-8 position-relative">
+      <div
+              class="col-8 position-relative">
   
           <div class=" align-content-center h-100 d-grid"  id="img-container">
             <img  :src="images[counter].src" alt="images[counter].alt">
@@ -32,14 +36,22 @@
       </div>
 
       <div class="col-4   pm-container-slides position-relative">
-
-        <div @click="nextPrev=false, nextPrevFunction()"  class="  d-flex pm-down ">
+      <div
+      @click="nextPrev=false, nextPrevFunction()"
+      class="  d-flex pm-down "
+      >
           <i class="fa-solid fa-chevron-up"></i>
         </div>
 
         <div class="row h-100 d-block">
           
-            <img :class="{active : counter === image.num}" @click="counter=image.num" class="col my-2 carouselMenu" v-for="image in images" :src="image.src" :alt="image.alt">
+          <img
+              :class="{active : counter === index}"
+              @click="counter=index"
+              class="col my-2 carouselMenu"
+              v-for="(image, index) in images"
+              :src="image.src"
+              :alt="image.alt">
 
         </div>
  
